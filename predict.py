@@ -13,3 +13,8 @@ shuffle_data_loader = False
 
 transform = transforms.Compose([transforms.Resize((512, 512)), transforms.ToTensor(), transforms.Grayscale()])
 dataset = datasets.VOCSegmentation(
+    data_folder,
+    year="2007",
+    download=True,
+    image_set="train",
+    transform=transform,
