@@ -8,3 +8,8 @@ from torchvision import transforms, utils, datasets
 
 data_folder = "data"
 model_path = "model/unet-voc.pt"
+
+shuffle_data_loader = False
+
+transform = transforms.Compose([transforms.Resize((512, 512)), transforms.ToTensor(), transforms.Grayscale()])
+dataset = datasets.VOCSegmentation(
