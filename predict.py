@@ -24,3 +24,11 @@ dataset = datasets.VOCSegmentation(
 
 def predict():
     model = UNet(dimensions=22)
+    checkpoint = torch.load(model_path, map_location=torch.device("cpu"))
+    cell_dataset = torch.utils.data.DataLoader(dataset, batch_size=1, shuffle=shuffle_data_loader)
+    model.load_state_dict(checkpoint)
+    model.eval()
+    for i, batch in enumerate(cell_dataset):
+        input, _ = batch
+        output = model(input).detach()
+        input_array = input.squeeze().detach().numpy()
