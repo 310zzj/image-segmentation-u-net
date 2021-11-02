@@ -37,3 +37,5 @@ def predict():
         # Everything class 0 is background, make everything else white.
         # This is bad for images with several classes.
         output_array = torch.where(output_array > 0, 255, 0)
+        input_img = Image.fromarray(input_array * 255)
+        input_img.show()
