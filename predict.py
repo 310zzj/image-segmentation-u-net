@@ -18,3 +18,9 @@ dataset = datasets.VOCSegmentation(
     download=True,
     image_set="train",
     transform=transform,
+    target_transform=transform,
+)
+
+
+def predict():
+    model = UNet(dimensions=22)
