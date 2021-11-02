@@ -32,3 +32,8 @@ def predict():
         input, _ = batch
         output = model(input).detach()
         input_array = input.squeeze().detach().numpy()
+        output_array = output.argmax(dim=1)
+        # Simple conversion to black and white.
+        # Everything class 0 is background, make everything else white.
+        # This is bad for images with several classes.
+        output_array = torch.where(output_array > 0, 255, 0)
