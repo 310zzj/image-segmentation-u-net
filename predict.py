@@ -44,3 +44,8 @@ def predict():
         # Just showing first ten images. Change as you wish!
         if i > 10:
             break
+    return
+
+
+if __name__ == "__main__":
+    predict()
