@@ -1,0 +1,5 @@
+
+boltons==23.0.0
+Bottleneck==1.3.5
+brotlipy==0.7.0
+certifi==2023.7.22
