@@ -39,3 +39,8 @@ def predict():
         output_array = torch.where(output_array > 0, 255, 0)
         input_img = Image.fromarray(input_array * 255)
         input_img.show()
+        output_img = Image.fromarray(output_array.squeeze().numpy().astype(dtype=np.uint16)).convert("L")
+        output_img.show()
+        # Just showing first ten images. Change as you wish!
+        if i > 10:
+            break
