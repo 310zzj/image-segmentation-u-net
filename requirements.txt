@@ -25,3 +25,7 @@ importlib-metadata==6.0.0
 Jinja2==3.1.2
 joblib==1.2.0
 jsonpatch==1.32
+jsonpointer==2.1
+lazy_loader==0.3
+libmambapy==1.5.1
+locket==1.0.0
