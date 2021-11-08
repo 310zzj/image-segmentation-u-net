@@ -35,3 +35,9 @@ mkl-random==1.2.4
 mkl-service==2.4.0
 mpmath==1.3.0
 networkx==3.1
+numexpr==2.8.7
+numpy==1.26.0
+packaging==23.1
+pandas==2.1.1
+partd==1.4.1
+Pillow==10.0.1
