@@ -26,3 +26,11 @@ dataset = datasets.VOCSegmentation(
     transform=transform,
     target_transform=transform,
 )
+
+def train():
+    cell_dataset = torch.utils.data.DataLoader(dataset, batch_size=2, shuffle=shuffle_data_loader)
+
+    model = UNet(dimensions=22)
+    model.to(device)
+    if os.path.isfile(model_path):
+        model.load_state_dict(torch.load(model_path, map_location=torch.device(device)))
