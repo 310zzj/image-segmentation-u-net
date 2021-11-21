@@ -38,3 +38,5 @@ def train():
         model.parameters(), lr=0.0001, weight_decay=1e-8, momentum=0.9
     )
     criterion = nn.CrossEntropyLoss()
+    for epoch in range(epoch_number):
+        print(f"Epoch {epoch}")
