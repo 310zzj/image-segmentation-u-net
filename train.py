@@ -34,3 +34,7 @@ def train():
     model.to(device)
     if os.path.isfile(model_path):
         model.load_state_dict(torch.load(model_path, map_location=torch.device(device)))
+    optimizer = optim.RMSprop(
+        model.parameters(), lr=0.0001, weight_decay=1e-8, momentum=0.9
+    )
+    criterion = nn.CrossEntropyLoss()
