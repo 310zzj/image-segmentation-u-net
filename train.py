@@ -44,3 +44,8 @@ def train():
         for i, batch in enumerate(cell_dataset):
             input, target = batch
             input = input.to(device)
+            target = target.type(torch.LongTensor).to(device)
+            # HACK to skip the last item that has a batch size of 1, not working with the cross entropy implementation
+            if input.shape[0] < 2:
+                continue
+            optimizer.zero_grad()
