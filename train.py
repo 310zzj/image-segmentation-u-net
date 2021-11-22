@@ -40,3 +40,7 @@ def train():
     criterion = nn.CrossEntropyLoss()
     for epoch in range(epoch_number):
         print(f"Epoch {epoch}")
+        losses = []
+        for i, batch in enumerate(cell_dataset):
+            input, target = batch
+            input = input.to(device)
