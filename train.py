@@ -63,3 +63,7 @@ def train():
         torch.save(model.state_dict(), model_path)
     torch.save(model.state_dict(), model_path)
     return
+
+
+if __name__ == "__main__":
+    train()
