@@ -61,3 +61,5 @@ def train():
             print("Saving model")
 
         torch.save(model.state_dict(), model_path)
+    torch.save(model.state_dict(), model_path)
+    return
