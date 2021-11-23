@@ -53,3 +53,11 @@ def train():
             loss = criterion(output, target.squeeze())
             # step_loss = loss.item()
             loss.backward()
+            optimizer.step()
+            losses.append(loss.item())
+        # print the average loss for that epoch.
+        print(sum(losses) /len(losses))
+        if (epoch + 1) % saving_interval == 0:
+            print("Saving model")
+
+        torch.save(model.state_dict(), model_path)
