@@ -49,3 +49,7 @@ def train():
             if input.shape[0] < 2:
                 continue
             optimizer.zero_grad()
+            output = model(input)
+            loss = criterion(output, target.squeeze())
+            # step_loss = loss.item()
+            loss.backward()
