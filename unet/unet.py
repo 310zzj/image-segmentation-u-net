@@ -46,3 +46,10 @@ class DownLayer(nn.Module):
     def forward(self, x):
         x = self.conv(self.pool(x))
         return x
+
+
+class UpLayer(nn.Module):
+    def __init__(self, in_ch, out_ch):
+        super(UpLayer, self).__init__()
+        self.up = Up(in_ch, out_ch)
+        self.conv = DoubleConv(in_ch, out_ch)
