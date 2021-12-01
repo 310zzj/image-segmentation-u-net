@@ -35,3 +35,12 @@ class Up(nn.Module):
         x2 = F.pad(x2, [diffX // 2, diffX - diffX // 2, diffY // 2, diffY - diffY // 2])
         x = torch.cat([x2, x1], dim=1)
         return x
+
+
+class DownLayer(nn.Module):
+    def __init__(self, in_ch, out_ch):
+        super(DownLayer, self).__init__()
+        self.pool = nn.MaxPool2d(2, stride=2, padding=0)
+        self.conv = DoubleConv(in_ch, out_ch)
+
+    def forward(self, x):
