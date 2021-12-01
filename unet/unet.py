@@ -44,3 +44,5 @@ class DownLayer(nn.Module):
         self.conv = DoubleConv(in_ch, out_ch)
 
     def forward(self, x):
+        x = self.conv(self.pool(x))
+        return x
