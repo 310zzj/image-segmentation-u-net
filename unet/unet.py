@@ -53,3 +53,14 @@ class UpLayer(nn.Module):
         super(UpLayer, self).__init__()
         self.up = Up(in_ch, out_ch)
         self.conv = DoubleConv(in_ch, out_ch)
+
+    def forward(self, x1, x2):
+        a = self.up(x1, x2)
+        x = self.conv(a)
+        return x
+
+
+class UNet(nn.Module):
+    def __init__(self, dimensions=2):
+        super(UNet, self).__init__()
+        self.conv1 = DoubleConv(1, 64)
