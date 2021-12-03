@@ -70,3 +70,11 @@ class UNet(nn.Module):
         self.down4 = DownLayer(512, 1024)
         self.up1 = UpLayer(1024, 512)
         self.up2 = UpLayer(512, 256)
+        self.up3 = UpLayer(256, 128)
+        self.up4 = UpLayer(128, 64)
+        self.last_conv = nn.Conv2d(64, dimensions, 1)
+
+    def forward(self, x):
+        x1 = self.conv1(x)
+        x2 = self.down1(x1)
+        x3 = self.down2(x2)
