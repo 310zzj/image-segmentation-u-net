@@ -78,3 +78,8 @@ class UNet(nn.Module):
         x1 = self.conv1(x)
         x2 = self.down1(x1)
         x3 = self.down2(x2)
+        x4 = self.down3(x3)
+        x5 = self.down4(x4)
+        x1_up = self.up1(x4, x5)
+        x2_up = self.up2(x3, x1_up)
+        x3_up = self.up3(x2, x2_up)
