@@ -83,3 +83,5 @@ class UNet(nn.Module):
         x1_up = self.up1(x4, x5)
         x2_up = self.up2(x3, x1_up)
         x3_up = self.up3(x2, x2_up)
+        x4_up = self.up4(x1, x3_up)
+        output = self.last_conv(x4_up)
