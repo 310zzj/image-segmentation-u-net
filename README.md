@@ -1,1 +1,1 @@
-# Image-Segmentation-U-Net\n\nThis is a concise PyTorch implementation 
+# Image-Segmentation-U-Net\n\nThis is a concise PyTorch implementation of U-ne
