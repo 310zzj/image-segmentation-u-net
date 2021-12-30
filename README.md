@@ -1,1 +1,1 @@
-# Image-Segmentation-U-Net\n\nThis is a concise PyTorch implementation of U-net, as described in the paper: https://arxiv.org/abs/1505.04597\n\n![Output 
+# Image-Segmentation-U-Net\n\nThis is a concise PyTorch implementation of U-net, as described in the paper: https://arxiv.org/abs/1505.04597\n\n![Output ima
