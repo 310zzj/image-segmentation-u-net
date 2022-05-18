@@ -2,4 +2,4 @@
 data
 ├── test-volume.tif
 ├── train-labels.tif
-└── train-vol
+└── train-volume.tif
