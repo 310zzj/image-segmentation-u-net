@@ -3,4 +3,4 @@ data
 ├── test-volume.tif
 ├── train-labels.tif
 └── train-volume.tif
-```\n\n## Installation\n\nRun the following com
+```\n\n## Installation\n\nRun the following commands
