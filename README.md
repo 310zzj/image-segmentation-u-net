@@ -4,4 +4,4 @@ data
 ├── train-labels.tif
 └── train-volume.tif
 ```\n\n## Installation\n\nRun the following commands:\n```
-pip install 
+pip install tor
