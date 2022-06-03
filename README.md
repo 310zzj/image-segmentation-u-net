@@ -4,4 +4,5 @@ data
 ├── train-labels.tif
 └── train-volume.tif
 ```\n\n## Installation\n\nRun the following commands:\n```
-pip install torch numpy pillo
+pip install torch numpy pillow
+mkd
