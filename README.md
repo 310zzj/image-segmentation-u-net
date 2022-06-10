@@ -6,4 +6,4 @@ data
 ```\n\n## Installation\n\nRun the following commands:\n```
 pip install torch numpy pillow
 mkdir model
-```\n\n## T
+```\n\n## Tra
