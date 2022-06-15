@@ -6,4 +6,5 @@ data
 ```\n\n## Installation\n\nRun the following commands:\n```
 pip install torch numpy pillow
 mkdir model
-```\n\n## Training\n\nTo train, use:
+```\n\n## Training\n\nTo train, use:\n```
+py
