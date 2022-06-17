@@ -7,4 +7,5 @@ data
 pip install torch numpy pillow
 mkdir model
 ```\n\n## Training\n\nTo train, use:\n```
-python train
+python train.py
+``
