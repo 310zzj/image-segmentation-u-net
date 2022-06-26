@@ -8,4 +8,5 @@ pip install torch numpy pillow
 mkdir model
 ```\n\n## Training\n\nTo train, use:\n```
 python train.py
-```\n\n## Predicting on the Test Dataset\n\nTo predict on the test dataset, use:\n
+```\n\n## Predicting on the Test Dataset\n\nTo predict on the test dataset, use:\n```
+p
