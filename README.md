@@ -10,4 +10,4 @@ mkdir model
 python train.py
 ```\n\n## Predicting on the Test Dataset\n\nTo predict on the test dataset, use:\n```
 python predict.py
-```\n\n## References:\n- https://github.com/milesial/Pytor
+```\n\n## References:\n- https://github.com/milesial/Pytorch-UN
